@@ -4,18 +4,18 @@ import java.sql.Date;
 import java.util.Vector;
 
 public class KhachHang {
-	private int maKhachHang;
+	private String maKhachHang;
 	private String ten;
 	private String ho;
 	private Date ngaySinh;
 	private String gioiTinh;
 	private String cmnd;
 	private String soDienThoai;
-	private DiaChi diaChi;
-	public int getMaKhachHang() {
+	private String diaChi;
+	public String getMaKhachHang() {
 		return maKhachHang;
 	}
-	public void setMaKhachHang(int maKhachHang) {
+	public void setMaKhachHang(String maKhachHang) {
 		this.maKhachHang = maKhachHang;
 	}
 	public String getTen() {
@@ -55,15 +55,15 @@ public class KhachHang {
 		this.soDienThoai = soDienThoai;
 	}
 	
-	public DiaChi getDiaChi() {
+	public String  getDiaChi() {
 		return diaChi;
 	}
-	public void setDiaChi(DiaChi diaChi) {
+	public void setDiaChi(String diaChi) {
 		this.diaChi = diaChi;
 	}
 	
-	public KhachHang(int maKhachHang, String ten, String ho, Date ngaySinh, String gioiTinh, String cmnd,
-			String soDienThoai, DiaChi diaChi) {
+	public KhachHang(String maKhachHang, String ten, String ho, Date ngaySinh, String gioiTinh, String cmnd,
+			String soDienThoai, String diaChi) {
 		super();
 		this.maKhachHang = maKhachHang;
 		this.ten = ten;
@@ -94,7 +94,6 @@ public class KhachHang {
 		v.add(gioiTinh);
 		v.add(cmnd);
 		v.add(soDienThoai);
-		
 		v.add(diaChi);
 		return v;
 	}
