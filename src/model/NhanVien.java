@@ -12,7 +12,7 @@ public class NhanVien {
 	private String gioiTinh;
 	private String cmnd;
 	private String soDienThoai;
-	private DiaChi diaChi;
+	private String diaChi;
 	private TaiKhoan taiKhoan;
 	private String loaiNhanVien;
 	private String trangThai;
@@ -77,10 +77,10 @@ public class NhanVien {
 		this.trangThai = trangThai;
 	}
 	
-	public DiaChi getDiaChi() {
+	public String getDiaChi() {
 		return diaChi;
 	}
-	public void setDiaChi(DiaChi diaChi) {
+	public void setDiaChi(String diaChi) {
 		this.diaChi = diaChi;
 	}
 	public TaiKhoan getTaiKhoan() {
@@ -91,7 +91,7 @@ public class NhanVien {
 	}
 	
 	public NhanVien(int maNhanVien, String caLamViec, String ten, String ho, Date ngaySinh, String gioiTinh,
-			String cmnd, String soDienThoai, DiaChi diaChi, TaiKhoan taiKhoan, String loaiNhanVien, String trangThai) {
+			String cmnd, String soDienThoai, String diaChi, TaiKhoan taiKhoan, String loaiNhanVien, String trangThai) {
 		super();
 		this.maNhanVien = maNhanVien;
 		this.caLamViec = caLamViec;
@@ -129,7 +129,7 @@ public class NhanVien {
 		v.add(cmnd);
 		v.add(soDienThoai);
 		v.add(caLamViec);
-		v.add(diaChi.getMaDiaChi());
+		v.add(diaChi);
 		v.add(taiKhoan.getTenTaiKhoan());
 		v.add(loaiNhanVien);
 		v.add(trangThai);

@@ -5,7 +5,7 @@ public class NhaCungCap {
 	private String tenNCC;
 	private String soDienThoai;
 	private String gmail;
-	private DiaChi diaChi;
+	private String diaChi;
 	public NhaCungCap() {
 		super();
 		// TODO Auto-generated constructor stub
@@ -19,7 +19,7 @@ public class NhaCungCap {
 		super();
 		this.maNCC = maNCC;
 	}
-	public NhaCungCap(int maNCC, String tenNCC, String soDienThoai, String gmail, DiaChi diaChi) {
+	public NhaCungCap(int maNCC, String tenNCC, String soDienThoai, String gmail, String diaChi) {
 		super();
 		this.maNCC = maNCC;
 		this.tenNCC = tenNCC;
@@ -51,10 +51,10 @@ public class NhaCungCap {
 	public void setGmail(String gmail) {
 		this.gmail = gmail;
 	}
-	public DiaChi getDiaChi() {
+	public String getDiaChi() {
 		return diaChi;
 	}
-	public void setDiaChi(DiaChi diaChi) {
+	public void setDiaChi(String diaChi) {
 		this.diaChi = diaChi;
 	}
 	@Override
