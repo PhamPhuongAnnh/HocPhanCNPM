@@ -5,8 +5,8 @@ import java.util.Vector;
 
 public class KhachHang {
 	private String maKhachHang;
+        private String ho;
 	private String ten;
-	private String ho;
 	private Date ngaySinh;
 	private String gioiTinh;
 	private String cmnd;

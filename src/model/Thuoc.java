@@ -23,7 +23,6 @@ public class Thuoc {
 	private float giaNhap;
 	private float donGia;
 	private int soLuongNhap;
-	private byte[] hinhAnh;
 	private String trangThai;
 	public Thuoc() {
 		super();
@@ -52,13 +51,12 @@ public class Thuoc {
 		this.giaNhap = giaNhap;
 		this.donGia = donGia;
 		this.soLuongNhap = soLuongNhap;
-		this.hinhAnh = hinhAnh;
 		this.trangThai = trangThai;
 	}
 	
 	public Thuoc(String soDangky, String tenThuoc, String nhomThuoc,String phanLoai, String hoatChat, String hamLuong, String dangBaoChe,
 			String quyCach, String tieuChuan, NhaCungCap nhaCungcap, Date ngaySanXuat, Date hanSuDung, String donViTinh,
-			float giaNhap, float donGia, int soLuongNhap, byte[] hinhAnh, String trangThai) {
+			float giaNhap, float donGia, int soLuongNhap, String trangThai) {
 		super();
 		this.soDangky = soDangky;
 		this.tenThuoc = tenThuoc;
@@ -76,7 +74,6 @@ public class Thuoc {
 		this.giaNhap = giaNhap;
 		this.donGia = donGia;
 		this.soLuongNhap = soLuongNhap;
-		this.hinhAnh = hinhAnh;
 		this.trangThai = trangThai;
 	}
 
@@ -193,12 +190,6 @@ public class Thuoc {
 	public void setSoLuongNhap(int soLuongNhap) {
 		this.soLuongNhap = soLuongNhap;
 	}
-	public byte[] getHinhAnh() {
-		return hinhAnh;
-	}
-	public void setHinhAnh(byte[] hinhAnh) {
-		this.hinhAnh = hinhAnh;
-	}
 	
 	@Override
 	public String toString() {
@@ -207,7 +198,7 @@ public class Thuoc {
 				+ ", dangBaoChe=" + dangBaoChe + ", QuyCach=" + QuyCach + ", tieuChuan=" + tieuChuan + ", nhaCungcap="
 				+ nhaCungcap + ", ngaySanXuat=" + ngaySanXuat + ", hanSuDung=" + hanSuDung + ", donViTinh=" + donViTinh
 				+ ", giaNhap=" + giaNhap + ", donGia=" + donGia + ", soLuongNhap=" + soLuongNhap + ", hinhAnh="
-				+ Arrays.toString(hinhAnh) + ", trangThai=" + trangThai + "]";
+				+ ", trangThai=" + trangThai + "]";
 	}
 
 	@Override
