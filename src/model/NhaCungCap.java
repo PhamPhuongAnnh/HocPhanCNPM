@@ -1,5 +1,7 @@
 package model;
-
+/*
+    Chuyển kiểu dữ liệu diaChi thành String
+*/
 public class NhaCungCap {
 	private int maNCC;
 	private String tenNCC;
