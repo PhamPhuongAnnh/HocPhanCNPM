@@ -41,5 +41,9 @@ public class TaiKhoan {
 	public String toString() {
 		return "TaiKhoan [tenTaiKhoan=" + tenTaiKhoan + ", matKhau=" + matKhau + ", loaiTaiKhoan=" + loaiTaiKhoan + "]";
 	}
+
+    public boolean equalsIgnoreCase(String tenTK) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 	
 }

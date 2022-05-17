@@ -2,9 +2,11 @@ package model;
 
 import java.sql.Date;
 import java.util.Vector;
-
+/*
+    Chuyển kiểu dữ liệu của maNhanVien, diaChi thành String
+*/
 public class NhanVien {
-	private int maNhanVien;
+	private String maNhanVien;
 	private String caLamViec;
 	private String ten;
 	private String ho;
@@ -16,10 +18,14 @@ public class NhanVien {
 	private TaiKhoan taiKhoan;
 	private String loaiNhanVien;
 	private String trangThai;
-	public int getMaNhanVien() {
+
+    public NhanVien(String string, String string0, String string1, String string2, java.util.Date ngay, String string3, String string4, String string5, String string6, String string7, String string8, String string9) {
+        
+    }
+	public String getMaNhanVien() {
 		return maNhanVien;
 	}
-	public void setMaNhanVien(int maNhanVien) {
+	public void setMaNhanVien(String maNhanVien) {
 		this.maNhanVien = maNhanVien;
 	}
 	public String getCaLamViec() {
@@ -90,7 +96,7 @@ public class NhanVien {
 		this.taiKhoan = taiKhoan;
 	}
 	
-	public NhanVien(int maNhanVien, String caLamViec, String ten, String ho, Date ngaySinh, String gioiTinh,
+	public NhanVien(String maNhanVien, String caLamViec, String ten, String ho, Date ngaySinh, String gioiTinh,
 			String cmnd, String soDienThoai, String diaChi, TaiKhoan taiKhoan, String loaiNhanVien, String trangThai) {
 		super();
 		this.maNhanVien = maNhanVien;
@@ -112,7 +118,7 @@ public class NhanVien {
 	}
 	@Override
 	public String toString() {
-		return "NhanVien [maNhanVien=" + maNhanVien + ", caLamViec=" + caLamViec + ", ten=" + ten + ", ho=" + ho
+		return "NhanVien [maNhanVien=" + maNhanVien + ", caLamViec=" + caLamViec + ",  ho=" + ho + ", ten" + ten
 				+ ", ngaySinh=" + ngaySinh + ", gioiTinh=" + gioiTinh + ", cmnd=" + cmnd + ", soDienThoai="
 				+ soDienThoai + ", diaChi=" + diaChi + ", taiKhoan=" + taiKhoan + ", loaiNhanVien=" + loaiNhanVien
 				+ ", trangThai=" + trangThai + "]";

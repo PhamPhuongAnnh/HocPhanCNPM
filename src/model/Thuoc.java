@@ -3,6 +3,7 @@ package model;
 
 import java.util.Arrays;
 import java.util.Date;
+import java.util.Scanner;
 
 
 public class Thuoc {
@@ -16,13 +17,14 @@ public class Thuoc {
 	private String dangBaoChe;
 	private String QuyCach;
 	private String tieuChuan;
-	private NhaCungCap nhaCungcap;
+	private int maNCC;
 	private Date ngaySanXuat;
 	private Date hanSuDung;
 	private String donViTinh;
 	private float giaNhap;
 	private float donGia;
 	private int soLuongNhap;
+	private byte[] hinhAnh;
 	private String trangThai;
 	public Thuoc() {
 		super();
@@ -30,7 +32,7 @@ public class Thuoc {
 	}
 	
 	public Thuoc(int maThuoc, String soDangky, String tenThuoc,String nhomThuoc, String phanLoai, String hoatChat, String hamLuong,
-			String dangBaoChe, String quyCach, String tieuChuan, NhaCungCap nhaCungcap, Date ngaySanXuat,
+			String dangBaoChe, String quyCach, String tieuChuan, int maNCC, Date ngaySanXuat,
 			Date hanSuDung, String donViTinh, float giaNhap, float donGia, int soLuongNhap, byte[] hinhAnh,
 			String trangThai) {
 		super();
@@ -44,19 +46,20 @@ public class Thuoc {
 		this.dangBaoChe = dangBaoChe;
 		QuyCach = quyCach;
 		this.tieuChuan = tieuChuan;
-		this.nhaCungcap = nhaCungcap;
+		this.maNCC = maNCC;
 		this.ngaySanXuat = ngaySanXuat;
 		this.hanSuDung = hanSuDung;
 		this.donViTinh = donViTinh;
 		this.giaNhap = giaNhap;
 		this.donGia = donGia;
 		this.soLuongNhap = soLuongNhap;
+		this.hinhAnh = hinhAnh;
 		this.trangThai = trangThai;
 	}
 	
 	public Thuoc(String soDangky, String tenThuoc, String nhomThuoc,String phanLoai, String hoatChat, String hamLuong, String dangBaoChe,
-			String quyCach, String tieuChuan, NhaCungCap nhaCungcap, Date ngaySanXuat, Date hanSuDung, String donViTinh,
-			float giaNhap, float donGia, int soLuongNhap, String trangThai) {
+			String quyCach, String tieuChuan, int maNCC, Date ngaySanXuat, Date hanSuDung, String donViTinh,
+			float giaNhap, float donGia, int soLuongNhap, byte[] hinhAnh, String trangThai) {
 		super();
 		this.soDangky = soDangky;
 		this.tenThuoc = tenThuoc;
@@ -67,15 +70,20 @@ public class Thuoc {
 		this.dangBaoChe = dangBaoChe;
 		QuyCach = quyCach;
 		this.tieuChuan = tieuChuan;
-		this.nhaCungcap = nhaCungcap;
+		this.maNCC = maNCC;
 		this.ngaySanXuat = ngaySanXuat;
 		this.hanSuDung = hanSuDung;
 		this.donViTinh = donViTinh;
 		this.giaNhap = giaNhap;
 		this.donGia = donGia;
 		this.soLuongNhap = soLuongNhap;
+		this.hinhAnh = hinhAnh;
 		this.trangThai = trangThai;
 	}
+
+    public Thuoc(int mt, String string, String string0, String string1, String string2, String string3, String string4, String string5, String string6, String string7, int mncc, Date nsx, Date hsd, String string8, Float gn, Float dg, int sl, Byte ha, String string9) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 
 	public String getTrangThai() {
 		return trangThai;
@@ -148,11 +156,11 @@ public class Thuoc {
 	public void setTieuChuan(String tieuChuan) {
 		this.tieuChuan = tieuChuan;
 	}
-	public NhaCungCap getNhaCungcap() {
-		return nhaCungcap;
+	public int getMaNCC() {
+		return maNCC;
 	}
-	public void setNhaCungcap(NhaCungCap nhaCungcap) {
-		this.nhaCungcap = nhaCungcap;
+	public void setMaNCC(int naNCC) {
+		this.maNCC = maNCC;
 	}
 	public Date getNgaySanXuat() {
 		return ngaySanXuat;
@@ -190,15 +198,21 @@ public class Thuoc {
 	public void setSoLuongNhap(int soLuongNhap) {
 		this.soLuongNhap = soLuongNhap;
 	}
+	public byte[] getHinhAnh() {
+		return hinhAnh;
+	}
+	public void setHinhAnh(byte[] hinhAnh) {
+		this.hinhAnh = hinhAnh;
+	}
 	
 	@Override
 	public String toString() {
 		return "Thuoc [maThuoc=" + maThuoc + ", soDangky=" + soDangky + ", tenThuoc=" + tenThuoc + ", nhomThuoc="
 				+ nhomThuoc + ", phanLoai=" + phanLoai + ", hoatChat=" + hoatChat + ", hamLuong=" + hamLuong
-				+ ", dangBaoChe=" + dangBaoChe + ", QuyCach=" + QuyCach + ", tieuChuan=" + tieuChuan + ", nhaCungcap="
-				+ nhaCungcap + ", ngaySanXuat=" + ngaySanXuat + ", hanSuDung=" + hanSuDung + ", donViTinh=" + donViTinh
+				+ ", dangBaoChe=" + dangBaoChe + ", QuyCach=" + QuyCach + ", tieuChuan=" + tieuChuan + ", maNCC="
+				+ maNCC + ", ngaySanXuat=" + ngaySanXuat + ", hanSuDung=" + hanSuDung + ", donViTinh=" + donViTinh
 				+ ", giaNhap=" + giaNhap + ", donGia=" + donGia + ", soLuongNhap=" + soLuongNhap + ", hinhAnh="
-				+ ", trangThai=" + trangThai + "]";
+				+ Arrays.toString(hinhAnh) + ", trangThai=" + trangThai + "]";
 	}
 
 	@Override
